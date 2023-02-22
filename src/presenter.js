@@ -1,7 +1,7 @@
 
 const item = document.querySelector("#ingresa-cantitem");
 const prec = document.querySelector("#ingresa-precio");
-const form = document.querySelector("#saludador-form");
+const form = document.querySelector("#totalizador-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
