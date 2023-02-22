@@ -1,5 +1,6 @@
 
-const item = document.querySelector("#ngresar-cantitem");
+const item = document.querySelector("#ingresa-cantitem");
+const prec = document.querySelector("#ingresa-precio");
 const form = document.querySelector("#saludador-form");
 const div = document.querySelector("#resultado-div");
 
@@ -7,6 +8,7 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const itemcant = Number.parseInt(item.value);
+  const precio = Number.parseInt(prec.value);
 
-  div.innerHTML = "<p>" + itemcant + "</p>";
+  div.innerHTML = "<p>" + itemcant +" PRECIO DE ITEMS " + precio +"bs." + "</p>";
 });
