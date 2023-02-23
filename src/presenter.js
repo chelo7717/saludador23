@@ -1,14 +1,21 @@
-
-const item = document.querySelector("#ingresa-cantitem");
-const prec = document.querySelector("#ingresa-precio");
+const cantidad = document.querySelector("#cantidad-input");
+const precio = document.querySelector("#precio-input");
+const estado=document.querySelector("#estado-input");
 const form = document.querySelector("#totalizador-form");
-const div = document.querySelector("#resultado-div");
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const itemcant = Number.parseInt(item.value);
-  const precio = Number.parseInt(prec.value);
-
-  div.innerHTML = "<p>" + itemcant +" PRECIO DE ITEMS " + precio +"bs." + "</p>";
+form.addEventListener("submit", (event)=>{
+    event.preventDefault();
+    let res= precioTotal(cantidad.value,precio.value);
+    
+    document.getElementById('precio').innerHTML=res
+    
 });
+function precioTotal(cantidad,precio)
+{
+    if((cantidad <= 0) || (precio <= 0))
+    {
+        alert("Numero negativo");
+    }
+    let res=cantidad*precio;
+    return res;
+}
