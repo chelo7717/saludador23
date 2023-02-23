@@ -31,6 +31,9 @@ function ImpFORstate(valorcompra, valueState) {
       case 'TX':
           valorImpuestos = 0.0625;
           break;
+      case 'AL':
+          valorImpuestos = 0.04;
+          break;     
       case 'NV':
           valorImpuestos = 0.08;
           break;    
