@@ -6,8 +6,10 @@ const form = document.querySelector("#totalizador-form");
 form.addEventListener("submit", (event)=>{
     event.preventDefault();
     let res= precioTotal(cantidad.value,precio.value);
+    let valorimpuesto = ImpFORstate(res,estado.value);
     
-    document.getElementById('precio').innerHTML=res
+    document.getElementById('precio').innerHTML=res;
+    document.getElementById('impuesto').innerHTML = valorimpuesto;
     
 });
 function precioTotal(cantidad,precio)
@@ -18,4 +20,17 @@ function precioTotal(cantidad,precio)
     }
     let res=cantidad*precio;
     return res;
+}
+function ImpFORstate(valorcompra, valueState) {
+  let valorImpuestos=0;
+  let res;
+  switch (valueState) {
+      case 'CA':
+          valorImpuestos = 0.0825;
+          break;
+      default:
+          alert("No existe");
+  }
+  res = valorcompra * valorImpuestos;
+  return res;
 }
