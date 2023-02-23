@@ -36,7 +36,10 @@ function ImpFORstate(valorcompra, valueState) {
           break;     
       case 'NV':
           valorImpuestos = 0.08;
-          break;    
+          break; 
+      case 'UT':
+          valorImpuestos = 0.0665;
+          break;   
       default:
           alert("No existe");
   }
