@@ -28,6 +28,10 @@ function ImpFORstate(valorcompra, valueState) {
       case 'CA':
           valorImpuestos = 0.0825;
           break;
+      case 'TX':
+          valorImpuestos = 0.0625;
+          break;
+          
       default:
           alert("No existe");
   }
